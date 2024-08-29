@@ -1,7 +1,7 @@
 var foodService = require("../services/foodService");
 var createFood = async (req, res) => {
   try {
-    const foodItem = await foodService.createFood(req.body);
+    const foodItem = await foodService.createFood(req);
     res.status(200).send(foodItem);
   } catch (error) {
     console.error(error);
